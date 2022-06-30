@@ -8,7 +8,7 @@ const FeedbackItem = ({ item }) => {
     const {deleteFeedback, editFeedback} = useContext(FeedbackContext)
     return (
         //NOTE: reverse the card false to true for darker view.
-        <Card reverse={true}>
+        <Card reverse={false}>
             <div className="num-display">{item.rating}</div>
             <button onClick={() => deleteFeedback(item.id)} className='close'><RiCloseCircleFill color='#ff6a95' /></button>
             <button onClick={() => editFeedback(item)} className='edit'><RiEdit2Fill/></button>
